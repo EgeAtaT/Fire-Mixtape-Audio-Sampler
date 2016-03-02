@@ -1,6 +1,5 @@
 function varargout = gui1(varargin)
 % GUI1 MATLAB code for gui1.fig
-%edit
 %      GUI1, by itself, creates a new GUI1 or raises the existing
 %      singleton*.
 %
@@ -217,10 +216,7 @@ function pushbutton16_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
 
-[soundData,samplingFreq]=audioread(FileName);
-handles.sound=soundData;
-left=handles.sound(:,1);
-right=handles.sound(:,2);
+
 
 
 % --- Executes on selection change in popupmenu1.
