@@ -22,7 +22,7 @@ function varargout = gui1(varargin)
 
 % Edit the above text to modify the response to help gui1
 
-% Last Modified by GUIDE v2.5 02-Mar-2016 21:06:08
+% Last Modified by GUIDE v2.5 01-Mar-2016 19:20:25
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -80,8 +80,10 @@ function sample2_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
-
-
+if isequal(FileName,0) || isequal(PathName,0)
+    return
+end
+[y,Fs]=audioread('jazz.wav');
 
 % --- Executes on button press in sample6.
 function sample6_Callback(hObject, eventdata, handles)
@@ -208,6 +210,7 @@ function sample1_Callback(hObject, eventdata, handles)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
 
 
+
 % --- Executes on button press in sample5.
 function sample5_Callback(hObject, eventdata, handles)
 % hObject    handle to sample5 (see GCBO)
@@ -233,13 +236,6 @@ function popupmenu1_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
-
-[y,fs]=audioread('jazz.wav');
-t=linspace(0,length(y)/fs,length(y));
-plot(t,y)
-fft=1024;
-f=linspace(0,fs,fft);
-
 
 
 % --- Executes on key press with focus on sample1 and none of its controls.
@@ -281,3 +277,5 @@ function pause_Callback(hObject, eventdata, handles)
 % hObject    handle to pause (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+
+
