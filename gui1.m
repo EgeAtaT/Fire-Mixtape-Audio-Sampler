@@ -234,6 +234,7 @@ function sample1_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
+[test,fs] = audioread(FileName);
 
 sound=FileName; %renaming file name
 set(handles.sample1,'string',sound,'enable','off'); %shows that the sample has been uploaded
