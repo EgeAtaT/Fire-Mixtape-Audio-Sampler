@@ -22,7 +22,7 @@ function varargout = gui1(varargin)
 
 % Edit the above text to modify the response to help gui1
 
-% Last Modified by GUIDE v2.5 01-Mar-2016 19:20:25
+% Last Modified by GUIDE v2.5 06-Mar-2016 13:57:19
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -80,10 +80,10 @@ function sample2_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
-if isequal(FileName,0) || isequal(PathName,0)
-    return
-end
-[y,Fs]=audioread('jazz.wav');
+
+sound=FileName; %renaming file name
+set(handles.sample4,'string',sound,'enable','off'); %shows that the sample has been uploaded
+
 
 % --- Executes on button press in sample6.
 function sample6_Callback(hObject, eventdata, handles)
@@ -92,6 +92,8 @@ function sample6_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
 
+sound=FileName; %renaming file name
+set(handles.sample4,'string',sound,'enable','off'); %shows that the sample has been uploaded
 
 
 % --- Executes on button press in sample7.
@@ -101,6 +103,8 @@ function sample7_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
 
+sound=FileName; %renaming file name
+set(handles.sample4,'string',sound,'enable','off'); %shows that the sample has been uploaded
 
 
 % --- Executes on button press in sample3.
@@ -110,6 +114,8 @@ function sample3_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
 
+sound=FileName; %renaming file name
+set(handles.sample4,'string',sound,'enable','off'); %shows that the sample has been uploaded
 
 
 % --- Executes on button press in sample4.
@@ -119,6 +125,8 @@ function sample4_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
 
+sound=FileName; %renaming file name
+set(handles.sample4,'string',sound,'enable','off'); %shows that the sample has been uploaded
 
 
 % --- Executes on button press in sample8.
@@ -128,6 +136,8 @@ function sample8_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
 
+sound=FileName; %renaming file name
+set(handles.sample4,'string',sound,'enable','off'); %shows that the sample has been uploaded
 
 
 % --- Executes on button press in sample9.
@@ -137,6 +147,8 @@ function sample9_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
 
+sound=FileName; %renaming file name
+set(handles.sample4,'string',sound,'enable','off'); %shows that the sample has been uploaded
 
 
 % --- Executes on button press in sample10.
@@ -146,6 +158,8 @@ function sample10_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
 
+sound=FileName; %renaming file name
+set(handles.sample4,'string',sound,'enable','off'); %shows that the sample has been uploaded
 
 
 % --- Executes on button press in sample11.
@@ -155,6 +169,8 @@ function sample11_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
 
+sound=FileName; %renaming file name
+set(handles.sample4,'string',sound,'enable','off'); %shows that the sample has been uploaded
 
 
 % --- Executes on button press in sample12.
@@ -164,6 +180,8 @@ function sample12_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
 
+sound=FileName; %renaming file name
+set(handles.sample4,'string',sound,'enable','off'); %shows that the sample has been uploaded
 
 
 % --- Executes on button press in sample16.
@@ -173,6 +191,8 @@ function sample16_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
 
+sound=FileName; %renaming file name
+set(handles.sample4,'string',sound,'enable','off'); %shows that the sample has been uploaded
 
 
 % --- Executes on button press in sample15.
@@ -182,6 +202,8 @@ function sample15_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
 
+sound=FileName; %renaming file name
+set(handles.sample4,'string',sound,'enable','off'); %shows that the sample has been uploaded
 
 
 % --- Executes on button press in sample14.
@@ -191,6 +213,8 @@ function sample14_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
 
+sound=FileName; %renaming file name
+set(handles.sample4,'string',sound,'enable','off'); %shows that the sample has been uploaded
 
 
 % --- Executes on button press in sample13.
@@ -200,6 +224,8 @@ function sample13_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
 
+sound=FileName; %renaming file name
+set(handles.sample4,'string',sound,'enable','off'); %shows that the sample has been uploaded
 
 
 % --- Executes on button press in sample1.
@@ -209,7 +235,17 @@ function sample1_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
 
+sound=FileName; %renaming file name
+set(handles.sample1,'string',sound,'enable','off'); %shows that the sample has been uploaded
 
+handles.sample=sound; %storing file name in handles
+[y,fs]=audioread([PathName '/' FileName]); %getting the sound data & freq
+handles.stereo=y; %adding sound data to handles
+handles.freq=fs; %adding frequency to handles
+guidata(hObject,handles); %saving gui data
+
+
+handles.axes=plot(handles.stereo,'b');
 
 % --- Executes on button press in sample5.
 function sample5_Callback(hObject, eventdata, handles)
@@ -218,11 +254,8 @@ function sample5_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 [FileName,PathName] = uigetfile('*.wav','Select audio file');
 
-%[soundData,samplingFreq]=audioread(FileName);
-%handles.sound=soundData;
-%left=handles.sound(:,1);
-%right=handles.sound(:,2);
-
+sound=FileName; %renaming file name
+set(handles.sample4,'string',sound,'enable','off'); %shows that the sample has been uploaded
 
 
 % --- Executes during object creation, after setting all properties.
@@ -238,6 +271,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
 end
 
 
+
 % --- Executes on key press with focus on sample1 and none of its controls.
 function sample1_KeyPressFcn(hObject, eventdata, handles)
 % hObject    handle to sample1 (see GCBO)
@@ -247,22 +281,6 @@ function sample1_KeyPressFcn(hObject, eventdata, handles)
 %	Modifier: name(s) of the modifier key(s) (i.e., control, shift) pressed
 % handles    structure with handles and user data (see GUIDATA)
 
-
-% --- Executes on button press in mono.
-function mono_Callback(hObject, eventdata, handles)
-% hObject    handle to mono (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-    
-
-
-% --- Executes on button press in stereo.
-function stereo_Callback(hObject, eventdata, handles)
-% hObject    handle to stereo (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Hint: get(hObject,'Value') returns toggle state of stereo
 
 
 % --- Executes on button press in play.
@@ -279,3 +297,15 @@ function pause_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
+% --- Executes on button press in mono.
+function pushbutton20_Callback(hObject, eventdata, handles)
+% hObject    handle to mono (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in stereo.
+function pushbutton21_Callback(hObject, eventdata, handles)
+% hObject    handle to stereo (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
